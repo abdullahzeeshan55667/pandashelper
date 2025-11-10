@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pandashelper"
+version = "0.1.0"
+description = "Interactive pandas helper shell with vulnerability management utilities"
+readme = "README.md"
+authors = [{name = "Pandas Helper", email = "example@example.com"}]
+requires-python = ">=3.10"
+dependencies = []
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.0",
+]
+
+[project.scripts]
+pandas-shell = "pandashelper.cli:main"
+
+[tool.pytest.ini_options]
+addopts = "-q"
+pythonpath = ["src"]
